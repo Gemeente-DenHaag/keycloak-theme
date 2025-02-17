@@ -47,7 +47,7 @@ stages:
         rootFolderOrFile: '$(Build.SourcesDirectory)/denhaagtheme'
         includeRootFolder: true
         archiveType: 'tar'
-        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).tar.gz'
         replaceExistingArchive: true
     
     - task: PublishBuildArtifacts@1
