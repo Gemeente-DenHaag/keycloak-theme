@@ -1,4 +1,4 @@
-ARG KC_VERSION
+ARG KC_VERSION=26.0.8
 
 FROM bitnami/keycloak:${KC_VERSION} as builder
 WORKDIR /opt/bitnami/keycloak
@@ -6,7 +6,7 @@ WORKDIR /opt/bitnami/keycloak
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
 ENV KC_FEATURES=token-exchange,admin-fine-grained-authz
-ENV KC_DB=postgres
+# ENV KC_DB=postgres
 ENV KC_HTTP_RELATIVE_PATH=/
 
 # needed because of readonlyrootfilesystem
