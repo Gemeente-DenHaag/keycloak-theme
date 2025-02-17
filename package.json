@@ -1,0 +1,17 @@
+{
+  "name": "keycloak",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {},
+  "devDependencies": {
+    "copyfiles": "2.4.1",
+    "rimraf": "3.0.2"
+  },
+  "dependencies": {
+    "@gemeente-denhaag/keycloak": "0.1.1-alpha.236"
+  },
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "copy": "copyfiles --flat --verbose ./node_modules/@gemeente-denhaag/keycloak/dist/index.css ./denhaagtheme/login/resources/css"
+  }
+}
