@@ -69,5 +69,5 @@ stages:
         action: 'create'
         target: '$(Build.SourceVersion)'
         tagSource: 'gitTag'
-        assets: '$(Build.ArtifactStagingDirectory)'
+        assets: '$(Build.ArtifactStagingDirectory)/$(Build.SourceBranchName).tar.gz'
         addChangeLog: false
