@@ -44,7 +44,7 @@ stages:
     
     - task: ArchiveFiles@2
       inputs:
-        rootFolderOrFile: '$(Build.BinariesDirectory)/denhaagtheme'
+        rootFolderOrFile: '$(Build.SourcesDirectory)/denhaagtheme'
         includeRootFolder: true
         archiveType: 'tar'
         archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
