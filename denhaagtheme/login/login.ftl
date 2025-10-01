@@ -20,7 +20,7 @@
             <#assign digidObj = {"imageUrl": digidImg, "footerUrl": "https://digid.nl "}>
             <#assign digidMachtigenObj = {"imageUrl": digidImg, "footerUrl": "https://machtigen.digid.nl "}>
             <#assign eHerkenningObj = {"imageUrl": eHerkenningImg, "footerUrl": "https://eherkenning.nl/nl/eherkenning-aanvragen"}>
-            <#assign eHerkenningBewindvoeringObj = {"imageUrl": eHerkenningImg, "footerUrl": "https://bvd.mev.logius.nl/bewind/faq"}>
+            <#assign eHerkenningBewindvoeringObj = {"imageUrl": eHerkenningImg, "footerUrl": "https://www.logius.nl/diensten/bevoegdheidsverklaringsdienst/veelgestelde-vragen-bevoegdheidsverklaringsdienst"}>
             <#assign eidasObj = {"imageUrl": eidasImg, "footerUrl": "https://www.government.nl/topics/online-access-to-public-services-european-economic-area-eidas/everything-you-need-to-know-about-eidas"}>
             <#assign staticProviderData = {digid: digidObj, eHerkenning: eHerkenningObj, eidas: eidasObj}>
             <#assign staticAuthorisedProviderData = {digidMachtigen: digidMachtigenObj, eHerkenningBewindvoering: eHerkenningBewindvoeringObj, eidas: eidasObj}>
