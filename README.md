@@ -11,6 +11,11 @@ To create a new version:
 This will trigger the pipeilne to create a github release and publish a new version based on git tag.
 
 To test locally:
-1. npm install
-2. docker build . -t [tag]
-3. docker run -d [tag]
+1. npm ci
+2. npm run copy
+3. npm run clean
+4. docker run --name keycloak_test -p 8080:8080 \
+    --mount type=bind,source=./denhaagtheme,target=/opt/keycloak/themes/denhaagtheme \
+    -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADMIN_PASSWORD=change_me \
+    quay.io/keycloak/keycloak:26.3.1 \
+    start-dev

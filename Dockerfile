@@ -23,4 +23,4 @@ WORKDIR /opt/keycloak
 
 COPY --chown=keycloak:keycloak --from=builder /opt/keycloak/ /opt/keycloak/
 
-# ENTRYPOINT ["/opt/bitnami/keycloak/bin/kc.sh", "start --optimized"]
+ENTRYPOINT ["bin/kc.sh", "start-dev"]
