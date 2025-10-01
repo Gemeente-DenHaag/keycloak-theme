@@ -1,7 +1,7 @@
-ARG KC_VERSION=26.0.8
+ARG KC_VERSION=26.3.1
 
-FROM bitnami/keycloak:${KC_VERSION} as builder
-WORKDIR /opt/bitnami/keycloak
+FROM quay.io/keycloak/keycloak:${KC_VERSION} as builder
+WORKDIR /opt/keycloak
 
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
@@ -18,9 +18,9 @@ ADD --chown=keycloak:keycloak ./denhaagtheme/ themes/denhaagtheme/
 
 RUN bin/kc.sh build
 
-FROM bitnami/keycloak:${KC_VERSION}
-WORKDIR /opt/bitnami/keycloak
+FROM quay.io/keycloak/keycloak:${KC_VERSION}
+WORKDIR /opt/keycloak
 
-COPY --chown=keycloak:keycloak --from=builder /opt/bitnami/keycloak/ /opt/bitnami/keycloak/
+COPY --chown=keycloak:keycloak --from=builder /opt/keycloak/ /opt/keycloak/
 
 # ENTRYPOINT ["/opt/bitnami/keycloak/bin/kc.sh", "start --optimized"]
