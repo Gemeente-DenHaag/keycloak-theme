@@ -19,3 +19,4 @@ To test locally:
     quay.io/keycloak/keycloak:26.3.1 \
     start-dev
 4. import realm-export.json, this json is only for testing the theme. identity providers are all fake
+5. to view the theme, go to realm zgw-publiek -> clients -> look for client account and click on Home url
