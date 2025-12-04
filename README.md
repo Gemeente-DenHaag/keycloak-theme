@@ -17,5 +17,5 @@ To test locally:
 2. pnpm copy
 3. pnpm dev
 4. import realm-export.json, this json is only for testing the theme. identity providers are all fake
-5. Go to localhost:8080, login with user user and password password (see realm-export.json)
+5. Go to localhost:8080, login with user user and password password (see run_script.sh)
 6. to view the theme, go to realm zgw-publiek -> clients -> look for client account and click on Home url
