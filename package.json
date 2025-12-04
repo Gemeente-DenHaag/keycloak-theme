@@ -11,7 +11,9 @@
     "@gemeente-denhaag/keycloak": "0.1.1-alpha.236"
   },
   "scripts": {
+    "dev": "bash ./run_script.sh",
     "clean": "rimraf node_modules",
-    "copy": "copyfiles --flat --verbose ./node_modules/@gemeente-denhaag/keycloak/dist/index.css ./denhaagtheme/login/resources/css"
+    "copy": "copyfiles --flat --verbose ./node_modules/@gemeente-denhaag/keycloak/dist/index.css ./denhaagtheme/login/resources/css",
+    "preinstall": "npx only-allow pnpm"
   }
 }
