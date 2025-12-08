@@ -36,12 +36,16 @@ stages:
       displayName: 'Install Node.js'
 
     - bash: |
-        npm ci
+        npm install -g pnpm
+      displayName: 'Install pnpm'
+
+    - bash: |
+        pnpm i
       displayName: 'Install dependencies'
     
     - bash: |
-        npm run copy
-        npm run clean
+        pnpm run copy
+        pnpm run clean
       displayName: 'Build app'
     
     - task: ArchiveFiles@2
