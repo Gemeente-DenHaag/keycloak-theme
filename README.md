@@ -13,7 +13,7 @@ This will trigger the pipeilne to create a github release and publish a new vers
 
 To test locally:
 
-1. pnpm ci
+1. pnpm i
 2. pnpm copy
 3. pnpm dev
 4. import realm-export.json, this json is only for testing the theme. identity providers are all fake
