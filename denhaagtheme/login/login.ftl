@@ -53,6 +53,7 @@
                 </#if>
                 <@render.cardGroup providers=normalProviders providersData=staticProviderData />
             </#if>
+            
             <#-- Render the authentication cards for the authorised providers  -->
             <#if authorisedProviders?size != 0>
                 <h2 class="utrecht-heading-2" id="gemachtigde-heading">${msg("authorisedLoginTitle")}</h2>
