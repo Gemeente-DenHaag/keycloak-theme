@@ -24,7 +24,15 @@
             <#assign eidasObj = {"imageUrl": eidasImg, "footerUrl": "https://www.government.nl/topics/online-access-to-public-services-european-economic-area-eidas/everything-you-need-to-know-about-eidas"}>
             <#assign staticProviderData = {digid: digidObj, eHerkenning: eHerkenningObj, eidas: eidasObj}>
             <#assign staticAuthorisedProviderData = {digidMachtigen: digidMachtigenObj, eHerkenningBewindvoering: eHerkenningBewindvoeringObj, eidas: eidasObj}>
-            <#assign authorisedInfoNotification = {"type": "info", "summary": msg("authorisedNotification")}>
+            <#assign authorisedInfoNotification = {
+                "type": "info",
+                "title": msg("authorisedNotificationTitle"),
+                "text": msg("authorisedNotificationText"),
+                "listItems": [
+                    msg("authorisedNotificationItem1"),
+                    msg("authorisedNotificationItem2")
+                ]
+            }>
 
             <#-- Based on the current situation, where authorised provider aliases contains 'machtigen' or 'bewindvoering' -->
             <#assign normalProviders = []>
