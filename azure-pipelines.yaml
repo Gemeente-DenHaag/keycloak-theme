@@ -2,7 +2,9 @@ trigger:
   branches:
     include:
     - main
-    - refs/tags/*
+  tags:
+    include:
+    - '*'
 
 pr: none
 

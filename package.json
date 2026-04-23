@@ -1,5 +1,6 @@
 {
   "name": "keycloak",
+  "version": "0.0.4",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {},
@@ -14,6 +15,7 @@
     "dev": "bash ./run_script.sh",
     "clean": "rimraf node_modules",
     "copy": "copyfiles --flat --verbose ./node_modules/@gemeente-denhaag/keycloak/dist/index.css ./denhaagtheme/login/resources/css",
+    "release": "git tag v$npm_package_version && git push origin v$npm_package_version",
     "preinstall": "npx only-allow pnpm"
   }
 }
