@@ -11,7 +11,9 @@ To create a new version:
    ```sh
    pnpm run release
    ```
-   The script automatically uses the version from `package.json` as the git tag (`v0.0.5`).
+   The script will: install dependencies, copy the CSS, create a `.tar.gz` of the theme, push the git tag, and create the GitHub release with the asset attached.
+
+   > **Requires:** [GitHub CLI](https://cli.github.com/) (`gh`) installed and authenticated.
 
 This pushes the git tag to origin, which triggers the Azure pipeline to build the theme, create a GitHub release, and upload the `.tar.gz` asset.
 
